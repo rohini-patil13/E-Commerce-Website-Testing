@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="TestParallelAll(failed)">
+    <classes>
+      <class name="com.allure.test2">
+        <methods>
+          <include name="testMethod2"/>
+        </methods>
+      </class> <!-- com.allure.test2 -->
+      <class name="com.testcases.LoginTest">
+        <methods>
+          <include name="verify"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.testcases.LoginTest -->
+    </classes>
+  </test> <!-- TestParallelAll(failed) -->
+</suite> <!-- Failed suite [Suite] -->
