@@ -20,14 +20,16 @@ public class HomePage extends BaseClass{
 	@FindBy(xpath = "//i[contains(@class,'fa-trash')]")
 	WebElement deleteAccountBtn;
 	
+	@FindBy(xpath = "//i[contains(@class,'fa-lock')]")
+	WebElement logoutBtn;
+	
 	public HomePage() {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public LoginSignupPage clickOnSignUpLoginInBtn() {
+	public void clickOnSignUpLoginInBtn() {
 		action.moveToElement(SignuploginBtn).click().build().perform();
 //		SignuploginBtn.click();
-		return new LoginSignupPage();
 	}
 	
 	public void isHomePageLoaded() {
@@ -44,5 +46,9 @@ public class HomePage extends BaseClass{
 		action.moveToElement(deleteAccountBtn).click().build().perform();
 //		deleteAccountBtn.click();
 		return new AccountDeletedPage();
+	}
+	
+	public void clickOnLogoutBtn() {
+		action.moveToElement(logoutBtn).click().build().perform();
 	}
 }

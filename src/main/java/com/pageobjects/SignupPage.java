@@ -93,12 +93,12 @@ public class SignupPage extends BaseClass{
 	
 	public void selectNewsletterCheckBox() {
 		action.moveToElement(NewsletterCheckBox).click().build().perform();
-		NewsletterCheckBox.click();
+//		NewsletterCheckBox.click();
 	}
 	
 	public void selectOfferCheckBox() {
 		action.moveToElement(OfferCheckBox).click().build().perform();
-		OfferCheckBox.click();
+//		OfferCheckBox.click();
 	}
 	
 	public void enterName(String fName, String lName) {

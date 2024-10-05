@@ -36,7 +36,6 @@ public class BaseClass {
 	}
 	
 	public static void launchBrowser() {
-//		WebDriverManager.chromedriver().setup();
 		String browser = prop.getProperty("browser");
 		
 		if (browser.contains("Chrome")) {
@@ -56,6 +55,7 @@ public class BaseClass {
 		
 		driver.get(prop.getProperty("url"));
 		action = new Actions(driver);
+
 	}
 
 	public static String generateRandomEmail() {
