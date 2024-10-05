@@ -31,10 +31,29 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/commons-codec-1.17.0.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/commons-compress-1.26.2.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/commons-io-2.16.1.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/commons-lang3-3.15.0.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/dec-0.1.2.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/docker-java-3.4.0.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/docker-java-api-3.4.0.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/docker-java-core-3.4.0.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/docker-java-transport-3.4.0.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/docker-java-transport-httpclient5-3.4.0.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/error_prone_annotations-2.27.0.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/gson-2.11.0.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/guava-19.0.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/httpclient5-5.2.1.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/httpcore5-5.2.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/httpcore5-h2-5.2.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/jackson-annotations-2.10.3.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/jackson-core-2.10.3.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/jackson-databind-2.10.3.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/jcl-over-slf4j-1.7.30.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/jna-5.13.0.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/slf4j-api-2.0.13.jar"/>
+	<classpathentry kind="lib" path="D:/E-Commerce Website Testing/jar_files/webdrivermanager-5.9.2.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
