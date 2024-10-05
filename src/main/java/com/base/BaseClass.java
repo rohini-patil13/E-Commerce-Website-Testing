@@ -4,6 +4,8 @@ import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang3.RandomUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -56,5 +58,15 @@ public class BaseClass {
 		action = new Actions(driver);
 	}
 
+	public static String generateRandomEmail() {
+		int length = 10;
+	    boolean useLetters = true;
+	    boolean useNumbers = false;
+	    String generatedString = RandomStringUtils.random(length, useLetters, useNumbers);
+	    String generatedEmail = generatedString + "@xyzdomain.com";
+	    System.out.println("Test Email: " + generatedEmail);
+	    
+	    return generatedEmail;
+	    }
 	
 }

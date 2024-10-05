@@ -35,7 +35,7 @@ public class HomePageTest extends BaseClass{
 		home = new HomePage();
 		home.isHomePageLoaded();
 		signup = home.clickOnSignUpLoginInBtn();
-		signup.enterNewUserInfo("meow", "test11@zyffgfx.com");
+		signup.enterNewUserInfo("meow", generateRandomEmail());
 		create = signup.clickOnSignUp();
 		create.isSignupPageLoaded();
 		create.enterNewUserCreds("Mr", "Qwerty123", "11", "4", "1990");
