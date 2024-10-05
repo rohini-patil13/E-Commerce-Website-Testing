@@ -1,6 +1,7 @@
 package com.base;
 
 import java.io.FileInputStream;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -50,10 +51,11 @@ public class BaseClass {
 		
 		System.out.println("Driver: " + driver);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-		
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+
 		driver.get(prop.getProperty("url"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
 		action = new Actions(driver);
 
 	}
