@@ -65,9 +65,16 @@ public class SignupPage extends BaseClass{
 	
 	
 	public void isSignupPageLoaded() {
-		String title = SignupPageTitle.getText();
-		Boolean value = title.contains("ENTER ACCOUNT INFORMATION");
-		System.out.println("Signup page title visible: " + value);
+		try {
+			Thread.sleep(10000);
+			String title = SignupPageTitle.getText();
+			Boolean value = title.contains("ENTER ACCOUNT INFORMATION");
+			System.out.println("Signup page title visible: " + value);
+
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void enterNewUserCreds(String Title, String password, String day, String month, String year) {
