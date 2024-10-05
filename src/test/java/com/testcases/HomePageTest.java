@@ -35,7 +35,7 @@ public class HomePageTest extends BaseClass{
 	public void registerNewUser() {
 		home = new HomePage();
 		home.isHomePageLoaded();
-		signup = home.clickOnSignUpLoginInBtn();
+		home.clickOnSignUpLoginInBtn();
 		signup.enterNewUserInfo("meow", generateRandomEmail());
 		create = signup.clickOnSignUp();
 		create.isSignupPageLoaded();
