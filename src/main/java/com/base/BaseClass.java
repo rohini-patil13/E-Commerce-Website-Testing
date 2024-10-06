@@ -1,18 +1,18 @@
 package com.base;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.time.Duration;
+import java.time.LocalDate;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.apache.commons.lang3.RandomUtils;
-import org.openqa.selenium.PageLoadStrategy;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
+
 import org.openqa.selenium.interactions.Actions;
 
 import io.cucumber.java.BeforeAll;
@@ -71,6 +71,19 @@ public class BaseClass {
 	    System.out.println("Test Email: " + generatedEmail);
 	    
 	    return generatedEmail;
+	}
+	
+	 public void captureScreenshot(String methodname)
+	   { 
+	    LocalDate date = LocalDate.now();
+	    String timestamp = date.toString().replace("-", "_").replace(" ", "");
+	    try {
+	     File file= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	     FileUtils.copyFile(file, new File("D:\\E-Commerce Website Testing\\Screenshot"+methodname+timestamp+".jpg"));
 	    }
+	    catch (Exception e) {
+	   e.getMessage();
+	  }
+	   }
 	
 }
