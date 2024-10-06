@@ -1,11 +1,16 @@
 package com.base;
 
 import java.io.FileInputStream;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang3.RandomUtils;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -34,7 +39,6 @@ public class BaseClass {
 	}
 	
 	public static void launchBrowser() {
-//		WebDriverManager.chromedriver().setup();
 		String browser = prop.getProperty("browser");
 		
 		if (browser.contains("Chrome")) {
@@ -49,12 +53,24 @@ public class BaseClass {
 		
 		System.out.println("Driver: " + driver);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-		
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+
 		driver.get(prop.getProperty("url"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
 		action = new Actions(driver);
+
 	}
 
+	public static String generateRandomEmail() {
+		int length = 10;
+	    boolean useLetters = true;
+	    boolean useNumbers = false;
+	    String generatedString = RandomStringUtils.random(length, useLetters, useNumbers);
+	    String generatedEmail = generatedString + "@xyzdomain.com";
+	    System.out.println("Test Email: " + generatedEmail);
+	    
+	    return generatedEmail;
+	    }
 	
 }

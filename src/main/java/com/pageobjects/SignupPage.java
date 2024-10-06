@@ -65,9 +65,9 @@ public class SignupPage extends BaseClass{
 	
 	
 	public void isSignupPageLoaded() {
-		String title = SignupPageTitle.getText();
-		Boolean value = title.contains("ENTER ACCOUNT INFORMATION");
-		System.out.println("Signup page title visible: " + value);
+			String title = SignupPageTitle.getText();
+			Boolean value = title.contains("ENTER ACCOUNT INFORMATION");
+			System.out.println("Signup page title visible: " + value);
 	}
 	
 	public void enterNewUserCreds(String Title, String password, String day, String month, String year) {
@@ -93,12 +93,12 @@ public class SignupPage extends BaseClass{
 	
 	public void selectNewsletterCheckBox() {
 		action.moveToElement(NewsletterCheckBox).click().build().perform();
-		NewsletterCheckBox.click();
+//		NewsletterCheckBox.click();
 	}
 	
 	public void selectOfferCheckBox() {
 		action.moveToElement(OfferCheckBox).click().build().perform();
-		OfferCheckBox.click();
+//		OfferCheckBox.click();
 	}
 	
 	public void enterName(String fName, String lName) {
