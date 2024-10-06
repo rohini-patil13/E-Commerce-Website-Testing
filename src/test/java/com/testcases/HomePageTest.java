@@ -1,7 +1,6 @@
 package com.testcases;
 
 import org.testng.annotations.AfterMethod;
-
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -14,7 +13,7 @@ import com.pageobjects.SignupPage;
 
 public class HomePageTest extends BaseClass{
 	
-	HomePage home;
+	HomePage home = null;
 	LoginSignupPage signup;
 	SignupPage create;
 	AccountCreatedPage confirmCreate;
@@ -35,16 +34,16 @@ public class HomePageTest extends BaseClass{
 	public void registerNewUser() {
 		home = new HomePage();
 		home.isHomePageLoaded();
-		home.clickOnSignUpLoginInBtn();
+		signup = home.clickOnSignUpLoginInBtn();
 		signup.enterNewUserInfo("meow", generateRandomEmail());
 		create = signup.clickOnSignUp();
 		create.isSignupPageLoaded();
-		create.enterNewUserCreds("Mr", "Qwerty123", "11", "4", "1990");
+		create.enterNewUserCreds("Mr", "Qwerty123", "11", "5", "1990");
 		create.selectNewsletterCheckBox();
 		create.selectOfferCheckBox();
 		create.enterName("tester", "auto");
 		create.enterAddress("address123", "India", "AP", "City12", "654321");
-		create.enterMobileNumber("987463210");
+		create.enterMobileNumber("9874563210");
 		confirmCreate = create.clickOnCreateAccountBtn();
 		confirmCreate.isAccountCreatedPageLoaded();
 		confirmCreate.clickOnContinue();

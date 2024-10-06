@@ -70,6 +70,6 @@ public class LoginSignupPage extends BaseClass{
 	
 	public void isInvaidUserErrorDisplayed() {
 		Boolean value = IncorrectCredsErrorMessage.isDisplayed();
-		System.out.println("Error message displayed: " + value);
+		System.out.println("Error message displayed: "+ value);
 	}
 }

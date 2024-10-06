@@ -27,9 +27,10 @@ public class HomePage extends BaseClass{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void clickOnSignUpLoginInBtn() {
+	public LoginSignupPage clickOnSignUpLoginInBtn() {
 		action.moveToElement(SignuploginBtn).click().build().perform();
 //		SignuploginBtn.click();
+		return new LoginSignupPage();
 	}
 	
 	public void isHomePageLoaded() {
