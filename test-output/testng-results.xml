@@ -1,63 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-06T16:56:05 IST" name="Default suite" finished-at="2024-10-06T16:56:56 IST" duration-ms="50755">
+  <suite started-at="2024-10-07T22:05:13 IST" name="Default suite" finished-at="2024-10-07T22:05:31 IST" duration-ms="17414">
     <groups>
     </groups>
-    <test started-at="2024-10-06T16:56:05 IST" name="Default test" finished-at="2024-10-06T16:56:56 IST" duration-ms="50755">
-      <class name="com.testcases.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.LoginTest@66ac5762]" started-at="2024-10-06T16:56:05 IST" name="setup" finished-at="2024-10-06T16:56:13 IST" duration-ms="7368" status="PASS">
+    <test started-at="2024-10-07T22:05:13 IST" name="Default test" finished-at="2024-10-07T22:05:31 IST" duration-ms="17414">
+      <class name="com.testcases.CartTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.CartTest@6dee4f1b]" started-at="2024-10-07T22:05:13 IST" name="setup" finished-at="2024-10-07T22:05:20 IST" duration-ms="6761" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginWithExistingUser()[pri:0, instance:com.testcases.LoginTest@66ac5762]" started-at="2024-10-06T16:56:13 IST" name="loginWithExistingUser" finished-at="2024-10-06T16:56:22 IST" duration-ms="8949" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithExistingUser -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.testcases.LoginTest@66ac5762]" started-at="2024-10-06T16:56:22 IST" name="teardown" finished-at="2024-10-06T16:56:22 IST" duration-ms="225" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.LoginTest@66ac5762]" started-at="2024-10-06T16:56:22 IST" name="setup" finished-at="2024-10-06T16:56:27 IST" duration-ms="5206" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="loginwithInvalidCreds()[pri:0, instance:com.testcases.LoginTest@66ac5762]" started-at="2024-10-06T16:56:27 IST" name="loginwithInvalidCreds" finished-at="2024-10-06T16:56:32 IST" duration-ms="4215" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginwithInvalidCreds -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.testcases.LoginTest@66ac5762]" started-at="2024-10-06T16:56:32 IST" name="teardown" finished-at="2024-10-06T16:56:32 IST" duration-ms="246" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.LoginTest@66ac5762]" started-at="2024-10-06T16:56:32 IST" name="setup" finished-at="2024-10-06T16:56:37 IST" duration-ms="5623" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="logoutUser()[pri:0, instance:com.testcases.LoginTest@66ac5762]" started-at="2024-10-06T16:56:37 IST" name="logoutUser" finished-at="2024-10-06T16:56:56 IST" duration-ms="18391" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="verifyCartAfterLogin()[pri:0, instance:com.testcases.CartTest@6dee4f1b]" started-at="2024-10-07T22:05:20 IST" name="verifyCartAfterLogin" finished-at="2024-10-07T22:05:31 IST" duration-ms="10287" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//h2[text()='Login to your account']"}
+              <![CDATA[timeout: Timed out receiving message from renderer: 10.000
   (Session info: chrome=129.0.6668.58)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2f23959112bc601a53ad6ccac39f0121, findElement {using=xpath, value=//h2[text()='Login to your account']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.58, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\rohin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53481}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53481/devtoo..., se:cdpVersion: 129.0.6668.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2f23959112bc601a53ad6ccac39f0121]]>
+Command: [d7b3010dca69e3b12adb237167a694ea, actions {actions=[org.openqa.selenium.interactions.Sequence@31ceba99]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.58, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\rohin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62699}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62699/devtoo..., se:cdpVersion: 129.0.6668.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d7b3010dca69e3b12adb237167a694ea]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h2[text()='Login to your account']"}
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 10.000
   (Session info: chrome=129.0.6668.58)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2f23959112bc601a53ad6ccac39f0121, findElement {using=xpath, value=//h2[text()='Login to your account']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.58, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\rohin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53481}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53481/devtoo..., se:cdpVersion: 129.0.6668.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2f23959112bc601a53ad6ccac39f0121
+Command: [d7b3010dca69e3b12adb237167a694ea, actions {actions=[org.openqa.selenium.interactions.Sequence@31ceba99]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.58, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\rohin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62699}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62699/devtoo..., se:cdpVersion: 129.0.6668.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d7b3010dca69e3b12adb237167a694ea
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -68,15 +42,10 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
-at com.pageobjects.LoginSignupPage.isLoginTitleVisible(LoginSignupPage.java:62)
-at com.testcases.LoginTest.logoutUser(LoginTest.java:63)
+at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:631)
+at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:613)
+at com.pageobjects.HomePage.clickOnProductsBtn(HomePage.java:60)
+at com.testcases.CartTest.verifyCartAfterLogin(CartTest.java:36)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -105,15 +74,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logoutUser -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.testcases.LoginTest@66ac5762]" started-at="2024-10-06T16:56:56 IST" name="teardown" finished-at="2024-10-06T16:56:56 IST" duration-ms="258" status="PASS">
+        </test-method> <!-- verifyCartAfterLogin -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.testcases.CartTest@6dee4f1b]" started-at="2024-10-07T22:05:31 IST" name="teardown" finished-at="2024-10-07T22:05:31 IST" duration-ms="204" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.testcases.LoginTest -->
+      </class> <!-- com.testcases.CartTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

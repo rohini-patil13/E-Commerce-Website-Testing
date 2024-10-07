@@ -23,6 +23,9 @@ public class HomePage extends BaseClass{
 	@FindBy(xpath = "//i[contains(@class,'fa-lock')]")
 	WebElement logoutBtn;
 	
+	@FindBy(xpath = "//i[contains(@class,'card_travel')]")
+	WebElement ProductsBtn;
+	
 	public HomePage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -51,5 +54,10 @@ public class HomePage extends BaseClass{
 	
 	public void clickOnLogoutBtn() {
 		action.moveToElement(logoutBtn).click().build().perform();
+	}
+	
+	public ProductPage clickOnProductsBtn() {
+		action.moveToElement(ProductsBtn).click().build().perform();
+		return new ProductPage();
 	}
 }
